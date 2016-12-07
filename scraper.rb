@@ -15,4 +15,4 @@ params = {
   'senado_senadoresbundle_busquedahistoricostype%5BfechaHasta%5D%5Byear%5D' => 2016
 }
 
-res = Net::HTTP.post_form(url, params)
+page = MembersPage.new(response: Net::HTTP.post_form(url, params))
