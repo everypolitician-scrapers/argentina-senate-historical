@@ -1,4 +1,5 @@
 require 'net/http'
+require 'pp'
 require 'pry'
 require 'require_all'
 require 'scraped_page_archive/open-uri'
@@ -18,5 +19,5 @@ params = {
 
 request = Scraped::Request.new(url: url, strategies: [{ strategy: NetHttpPostRequest, params: params }])
 page = MembersPage.new(response: request.response).members.each do |member|
-  puts member.name
+  pp member.to_h
 end
