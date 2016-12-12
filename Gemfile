@@ -6,5 +6,5 @@ ruby '2.3.3'
 
 # gem "rails"
 gem 'pry'
-gem 'scraped', git: 'everypolitician/scraped'
-gem 'scraped_page_archive', git: 'everypolitician/scraped_page_archive'
+gem 'scraped', github: 'everypolitician/scraped'
+gem 'scraped_page_archive', github: 'everypolitician/scraped_page_archive'
